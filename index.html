@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tirth Bora | Project Showcase</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --card-hover: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --badge-bg: #0369a1;
+      --badge-text: #e0f2fe;
+      --border-color: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2rem 1rem;
+      background: linear-gradient(180deg, rgba(56, 189, 248, 0.1) 0%, rgba(30, 41, 59, 0) 100%);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-info {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      color: var(--text-main);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .contact-badge:hover {
+      border-color: var(--accent);
+      background-color: var(--card-hover);
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border-color);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background-color: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .skill-pill {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem 1rem;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tirth Bora</h1>
+      <p class="subtitle">Data Science Scholar & Software Developer &bull; IIT Madras</p>
+      <div class="contact-info">
+        <span class="contact-badge">
+          📧 <!--email_off-->24f3002455@ds.study.iitm.ac.in<!--/email_off-->
+        </span>
+        <a class="contact-badge" href="https://github.com/TirthBora" target="_blank" rel="noopener noreferrer">
+          🐙 github.com/TirthBora
+        </a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <div>
+            <h3>ORION-Energy-OS</h3>
+            <p>Intelligent energy operating system and analytics platform for renewable microgrid monitoring, demand forecasting, and smart grid automation.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Data Analytics</span>
+            <span class="tag">Energy Systems</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>CortexFS</h3>
+            <p>High-performance userspace filesystem architecture engineered for managing structured datasets, fast metadata lookups, and specialized caching.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Systems</span>
+            <span class="tag">File Systems</span>
+            <span class="tag">C / Python</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>Catalyst &amp; CatalystRelay</h3>
+            <p>Distributed message dispatching engine and developer tooling suite for resilient microservice communication, low-latency queues, and task orchestration.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Distributed Systems</span>
+            <span class="tag">Networking</span>
+            <span class="tag">Go / Python</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>Splitify</h3>
+            <p>Collaborative financial application designed to simplify bill splitting, debt minimization, receipt parsing, and shared group accounting.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Web App</span>
+            <span class="tag">Full Stack</span>
+            <span class="tag">REST API</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>Roommate-Dhoondho</h3>
+            <p>Full-stack matching and listing portal empowering students to discover compatible roommates, shared apartments, and verified campus accommodations.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>Trekking App</h3>
+            <p>Outdoor trail navigation and adventure companion featuring offline map caching, waypoint logging, elevation graphing, and gear checklists.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Mobile Web</span>
+            <span class="tag">GeoLocation</span>
+            <span class="tag">PWA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Stack</h2>
+      <div class="skills-list">
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">Data Science &amp; Machine Learning</span>
+        <span class="skill-pill">SQL &amp; Database Design</span>
+        <span class="skill-pill">JavaScript &amp; TypeScript</span>
+        <span class="skill-pill">React &amp; Node.js</span>
+        <span class="skill-pill">Linux &amp; Bash Scripting</span>
+        <span class="skill-pill">Git &amp; GitHub Actions</span>
+        <span class="skill-pill">Docker &amp; Cloud Deployment</span>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Tirth Bora &bull; IIT Madras BS in Data Science and Applications</p>
+      <p style="margin-top: 0.5rem;">
+        Contact: <!--email_off-->24f3002455@ds.study.iitm.ac.in<!--/email_off-->
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
